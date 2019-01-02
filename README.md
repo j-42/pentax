@@ -1,3 +1,3 @@
 # Pentax Panel  #
 
-Mixed technoly are a bit wierd as grunt was added afterword
+Stylus is used as plain CSS as grunt was added afterword
