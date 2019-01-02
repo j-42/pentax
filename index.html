@@ -8,7 +8,7 @@
   <meta name="author" content="Jasmine Morvan">
 
 
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="assets/css/main.css">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -17,10 +17,10 @@
 
 <body>
     <header>
-        <a href=""><img class="branding" src="imgs/logo.jpg" alt="Pentax Logo"></a>
+        <a href=""><img class="branding" src="assets/img/logo.png" alt="Pentax Logo"></a>
 
-        <a href="pdfs/pentax-fiche-prod-univers.pdf" download="pentax-fiche-prod-univers.pdf"><img class="icon" src="imgs/dl.png" alt="Télécharger"></a>
-        <a href="pdfs/pentax-fiche-prod-univers.pdf" target="_blank"><img class="icon" src="imgs/print.png" alt="Imprimer"></a>
+        <a href="assets/pdfs/pentax-fiche-prod-univers.pdf" download="pentax-fiche-prod-univers.pdf"><img class="icon" src="assets/img/dl.png" alt="Télécharger"></a>
+        <a href="assets/pdfs/pentax-fiche-prod-univers.pdf" target="_blank"><img class="icon" src="assets/img/print.png" alt="Imprimer"></a>
     </header>
 
     <section id="pentax" class="container">
@@ -35,11 +35,13 @@
         </nav>
 
 
-        <article id="gamme-progressifs" data-shrink="gamme-unifocaux" data-target="nav-gamme-progressifs" class="third">
+        <article id="gamme-progressifs" data-target="nav-gamme-progressifs" class="quarter">
 
             <div class="overlay black"></div>
 
-            <img class="bg" src="imgs/gamme-progressifs-p.jpg"  data-src="gamme-progressifs" alt="illustration">
+            <div class="image-container bg" data-src="gamme-progressifs">
+            </div>
+
 
             <div class="content">
 
@@ -47,7 +49,7 @@
                 <div class="overlay purple bottom-square"></div>
 
                 <div class="bottom-content">
-                    <img class="glass" src="imgs/glass.png" alt="glass">
+                    <img class="glass" src="assets/img/glass.png" alt="glass">
                     <div>
                         <h1>Gamme progressifs</h1>
                         <p>Les verres progressifs pour une vision nette facilitée à toute distance</p>
@@ -58,11 +60,39 @@
             </div><!--content-->
         </article>
 
-        <article id="gamme-unifocaux" data-shrink="gamme-progressifs" data-target="nav-gamme-unifocaux"  class="third">
+        <article id="gamme-interieur" data-target="nav-gamme-interieur" class="quarter">
 
             <div class="overlay black"></div>
 
-            <img class="bg" src="imgs/gamme-unifocaux-p.jpg" data-src="gamme-unifocaux" alt="illustration">
+            <div class="image-container bg" data-src="gamme-interieur">
+            </div>
+
+
+            <div class="content">
+
+                <div class="overlay purple-2 top-square"></div>
+                <div class="overlay purple-2 bottom-square"></div>
+
+                <div class="bottom-content">
+                    <img class="glass" src="assets/img/glass.png" alt="glass">
+                    <div>
+                        <h1>GAMME d’intérieur</h1>
+                        <p></p>
+                    </div>
+                    <a class="btn">découvrir</a>
+                </div>
+
+            </div><!--content-->
+        </article>
+
+
+        <article id="gamme-unifocaux" data-target="nav-gamme-unifocaux" class="quarter">
+
+            <div class="overlay black"></div>
+
+            <div class="image-container bg" data-src="gamme-unifocaux">
+            </div>
+          
 
             <div class="content">
 
@@ -70,7 +100,7 @@
                 <div class="overlay blue bottom-square"></div>
 
                 <div class="bottom-content">
-                    <img class="glass" src="imgs/glass.png" alt="glass">
+                    <img class="glass" src="assets/img/glass.png" alt="glass">
                     <div>
                         <h1>GAMME UNIFOCAUX</h1>
                         <p>Les verres unifocaux conçus pour une vision plus naturelle du monde et le confort des yeux</p>
@@ -82,11 +112,11 @@
 
         </article>
 
-        <nav id="pentax-nav" class="third">
+        <nav id="pentax-nav" class="quarter">
                 <div class="ov-h">
                     <div class="dotted">
                         <h1>Univers pentax</h1>
-                        <img class="icon" src="imgs/more.png" alt="plus">
+                        <img class="icon" src="assets/img/more.png" alt="plus">
                         <ul>
                             <li><a href="#" title="l’histoire pentax" onclick="go(2)"><h2>l’histoire</h2></a><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/><path d="M0-.25h24v24H0z" fill="none"/></svg></li>
                             <li><a href="#" title="les grandes étapes pentax" onclick="go(3)"><h2>les grandes étapes</h2></a><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/><path d="M0-.25h24v24H0z" fill="none"/></svg></li>
@@ -97,11 +127,11 @@
                 </div>
 
                  <div class="set-static">
-                    
+
                     <div class="dotted">
                          <h1>Traitements</h1>
-                        <img class="icon" src="imgs/more.png" alt="plus">
-                        <img class="icon hover-box" src="imgs/more-hover.png" alt="plus">
+                        <img class="icon" src="assets/img/more.png" alt="plus">
+                        <img class="icon hover-box" src="assets/img/more-hover.png" alt="plus">
                         <a href="#" class="thumb-link" title="Traitement" onclick="go(6)"></a>
                     </div><!-- dotted-->
                 </div>
@@ -109,23 +139,23 @@
                 <div class="set-static">
                     <div class="dotted">
                          <h1>tarifs &amp; mentions légales</h1>
-                        <img class="icon" src="imgs/more.png" alt="plus">
-                        <img class="icon hover-box" src="imgs/more-hover.png" alt="plus">
+                        <img class="icon" src="assets/img/more.png" alt="plus">
+                        <img class="icon hover-box" src="assets/img/more-hover.png" alt="plus">
                         <a href="#" class="thumb-link" title="tarifs &amp; mentions légales" onclick="go(18)"></a>
                     </div><!-- dotted-->
                 </div>
         </nav><!-- pentax-nav -->
 
-        
+
 
     </section>
     <footer>
         <!--<p><a href="http://fr.zone-secure.net/56745/405011/" target="_blank">Présentation Corporate</a></p>-->
-        <p>2017©Pentax - V1 -Tous droits réservés</p>
+        <p>2019©Pentax - V1 -Tous droits réservés</p>
         <!--<p><a href="http://netfirstagency.com" target="_blank">Réalisation Netfirst agency</a></p>-->
 
-        <script src="js/jquery-2.2.4.min.js"></script>
-        <script type="text/javascript" src="js/functions.js"></script>
+
+        <script type="text/javascript" src="assets/js/main.js"></script>
 
     </footer>
     <script>
