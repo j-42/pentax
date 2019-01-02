@@ -1,19 +1,5 @@
 $(function() {
 
-  // Tricks for IOs
-  $('body').on('touchstart', function(e) {
-    $('.container').css("pointer-events","auto");
-  });
-  $('body').on('touchmove', function(e) {
-      $('.container').css("pointer-events","none");
-  });
-  $('body').on('touchend', function(e) {
-      setTimeout(function() {
-          $('.container').css("pointer-events", "none");
-      },0);
-  });
-
-
     var getCurentImageWidth = 0;
 
     function resizeImgs(){
