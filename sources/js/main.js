@@ -23,7 +23,6 @@ $(function() {
             var src = $(this).data("src");
             var ratioContainer = ($(this).parent().width()) / ($(this).parent().height());
 
- 
 
             if (navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1 && navigator.userAgent.indexOf('604.1') === -1) {
                 $(this).attr("src", src);
