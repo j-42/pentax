@@ -175,11 +175,13 @@ module.exports = function(grunt) {
          options: {
              spawn: false
          }
-      },
+      }/*,
       jshint: {
         files: ['<%= dir.sources %>/js/main.js'],
         tasks: ['jshint']
-      },
+      }
+      */
+      ,
       sass: {
         options: {
          livereload: true,

@@ -21,11 +21,14 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
     var getCurentImageWidth = 0;
 
     function resizeImgs(){
+
         // Formatage des images au ratio
         $('.image-container.bg').each(function(){
             var src = $(this).data("src");
-
             var ratioContainer = ($(this).parent().width()) / ($(this).parent().height());
+
+ 
+
             if (navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1 && navigator.userAgent.indexOf('604.1') === -1) {
                 $(this).attr("src", src);
                 $(this).addClass("safari");
@@ -33,6 +36,7 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
             if(!isFinite(ratioContainer) || ratioContainer === 0){
                 return;
             }
+
             // landscape ratio
             if (ratioContainer >= 1.5){
                 src = "assets/img/" + src + "-l.png";
@@ -48,13 +52,13 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
                 $(this).addClass("landscape").removeClass("portrait");
             }
             // square portrait
-            else if (ratioContainer < 1 && ratioContainer >= 0.75) {
+            else if (ratioContainer < 1 && ratioContainer >= 0.5) {
                 src = "assets/img/" + src + "-sq.png";
                 $(this).css("background-image", "url('"+src+"')");
                 $(this).addClass("portrait").removeClass("landscape").removeClass("safari");
             }
             // portrait
-            else if (ratioContainer < 0.75){
+            else if (ratioContainer < 0.5){
                 src = "assets/img/" + src + "-p.png";
                 $(this).css("background-image", "url('"+src+"')");
                 $(this).addClass("portrait").removeClass("landscape");
@@ -113,6 +117,7 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
     // Ouverture menu retour
     $(".btn").click(function(){
         $("#back").addClass("stretch-x");
+        setTimeout(resizeImgs, 100);
         // Menu horizontal ou vertical
         $("#back").fadeIn();
 
@@ -131,7 +136,9 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
             $("article").removeClass("shrink-x");
             $(".half").addClass("quarter").removeClass("half");
             $("article").removeClass("main");
-            //resizeImgs();
+
+            setTimeout(resizeImgs, 1000);
+
         });
 
 

@@ -224,7 +224,7 @@ header .branding{
     max-width:24.5%;
 }
 
-article.third{
+article{
     cursor: pointer;
 }
 
@@ -870,6 +870,9 @@ footer p{
 
 /* --------------- MEDIA QUERIES --------------------*/
 @media (max-width : 978px){
+    article.quarter, article.half.main{
+        height: 600px;
+    }
     h1, h2, h3, h4, h5, h6, p,#back p, ul, li {
         font-size: 120%;
     }
@@ -890,15 +893,12 @@ footer p{
             -ms-flex-pack: baseline;
                 justify-content: baseline;
     }
-    .third, .half{
+    .quarter , .half{
         width:100%;
         max-width:100%;
         margin: 2.5px 0;
     }
-    article{
-        height: calc(100vh - 39px);
-        max-height: 100vh;
-    }
+
     #pentax-nav{
         -webkit-box-orient:initial;
         -webkit-box-direction:initial;
@@ -940,7 +940,8 @@ footer p{
         height: 0;
         border:0;
         margin: 0;
-    }.shrink-y{
+    }
+    .shrink-y{
         height: 50%;
         width: 80%;
     }
